@@ -1,0 +1,19 @@
+{
+  "name": "jcls",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/tranvansang/jscls",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "class",
+    "class names",
+    "join",
+    "remove",
+    "react"
+  ],
+  "author": "Tran Sang <tr@nsang.me>",
+  "license": "MIT"
+}
