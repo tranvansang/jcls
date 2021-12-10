@@ -3,7 +3,7 @@ Object.defineProperty(exports, '__esModule', {value: true})
 
 const classDelim = ' '
 
-exports.rmcls = exports.jcls = void 0
+exports.rcls = exports.jcls = void 0
 const jcls = (...classNames) => classNames
 	.filter(Boolean)
 	.join(classDelim)
@@ -20,4 +20,4 @@ const rcls = (classNames, ...toRemove) => {
 				: cls.test(cl)))
 		.join(classDelim)
 }
-exports.rmcls = rmcls
+exports.rcls = rcls
