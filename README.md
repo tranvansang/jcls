@@ -9,9 +9,9 @@ npm install -S jcls
 ```
 
 ```javascript
-import {jcls, rmcls} from 'jcls'
+import {jcls, rcls} from 'jcls'
 // or
-const {jcls, rmcls} = require('jcls')
+const {jcls, rcls} = require('jcls')
 ```
 
 ## API
@@ -20,14 +20,14 @@ const {jcls, rmcls} = require('jcls')
 
 ```typescript
 export declare const jcls: (...classNames: ReadonlyArray<string | boolean | null | undefined>) => string;
-export declare const rmcls: (classNames: string, ...toRemove: (string | boolean | RegExp | ((cls: string) => any) | null | undefined)[]) => string;
+export declare const rcls: (classNames: string, ...toRemove: (string | boolean | RegExp | ((cls: string) => any) | null | undefined)[]) => string;
 ```
 
 - `jcls(...classNames)`: Join classes into a single string.
   
   Falsy parameters are ignored. Other values are joined.
   
-- `rmcls(classNames, ...toRemove)`: remove classes from an existing class string.
+- `rcls(classNames, ...toRemove)`: remove classes from an existing class string.
 
  `toRemove` can contain `string`, `boolean`, `RegExp`, or `function`.
  Falsy parameters from `toRemove` are ignored.
@@ -41,6 +41,6 @@ jcls(
     '', // ignored
 )
 jcls('mb-2 p-3', styles.button)
-rmcls('mb-2 p-3 flex', 'p-3', 'flex') // note: toRemove must include class name separatedly
-rmcls('mb-2 p-3 flex', /p-.*/, /p?-.*/)
+rcls('mb-2 p-3 flex', 'p-3', 'flex') // note: toRemove must include class name separatedly
+rcls('mb-2 p-3 flex', /p-.*/, /p?-.*/)
 ```

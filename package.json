@@ -1,8 +1,8 @@
 {
   "name": "jcls",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "https://github.com/tranvansang/jscls",
+  "repository": "https://github.com/tranvansang/jcls",
   "files": [
     "index.js",
     "index.d.ts"
@@ -14,6 +14,6 @@
     "remove",
     "react"
   ],
-  "author": "Tran Sang <tr@nsang.me>",
+  "author": "Tran Sang <me@transa.ng>",
   "license": "MIT"
 }
