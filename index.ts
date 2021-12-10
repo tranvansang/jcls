@@ -6,7 +6,7 @@ export const jcls = (...classNames: ReadonlyArray<string | boolean | null | unde
 	.filter(Boolean)
 	.join(classDelim)
 
-export const rmcls = (
+export const rcls = (
 	classNames: string,
 	...toRemove: Array<string | boolean | null | undefined | 0 | -.0 | /*typeof NaN |*/ 0n | RegExp | ((cls: string) => any)>
 ) => {

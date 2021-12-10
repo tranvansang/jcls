@@ -9,7 +9,7 @@ const jcls = (...classNames) => classNames
 	.join(classDelim)
 
 exports.jcls = jcls
-const rmcls = (classNames, ...toRemove) => {
+const rcls = (classNames, ...toRemove) => {
 	const toRemoveList = toRemove.filter(Boolean)
 	return classNames
 		.split(classDelim)
