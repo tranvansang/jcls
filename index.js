@@ -1,16 +1,14 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', {value: true})
-
-const classDelim = ' '
-
-exports.rcls = exports.jcls = void 0
-const jcls = (...classNames) => classNames
-	.filter(Boolean)
-	.join(classDelim)
-
-exports.jcls = jcls
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rcls = void 0;
+const classDelim = ' ';
+function jcls(...classNames) {
+	return classNames
+		.filter(Boolean)
+		.join(classDelim);
+}
+exports.default = jcls;
 const rcls = (classNames, ...toRemove) => {
-	const toRemoveList = toRemove.filter(Boolean)
+	const toRemoveList = toRemove.filter(Boolean);
 	return classNames
 		.split(classDelim)
 		.filter(cl => !toRemoveList.some(cls => typeof cls === 'string'
@@ -18,6 +16,6 @@ const rcls = (classNames, ...toRemove) => {
 			: typeof cls === 'function'
 				? cls(cl)
 				: cls.test(cl)))
-		.join(classDelim)
-}
-exports.rcls = rcls
+		.join(classDelim);
+};
+exports.rcls = rcls;

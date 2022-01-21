@@ -2,13 +2,15 @@ const classDelim = ' '
 
 // https://github.com/Microsoft/TypeScript/issues/28682
 
-export const jcls = (...classNames: ReadonlyArray<string | boolean | null | undefined | 0 | -.0 | /*typeof NaN |*/ 0n>) => classNames
-	.filter(Boolean)
-	.join(classDelim)
+export default function jcls(...classNames: readonly (string | boolean | null | undefined | 0 | -.0 | /*typeof NaN |*/ 0n)[]) {
+	return classNames
+		.filter(Boolean)
+		.join(classDelim)
+}
 
 export const rcls = (
 	classNames: string,
-	...toRemove: Array<string | boolean | null | undefined | 0 | -.0 | /*typeof NaN |*/ 0n | RegExp | ((cls: string) => any)>
+	...toRemove: readonly (string | boolean | null | undefined | 0 | -.0 | /*typeof NaN |*/ 0n | RegExp | ((cls: string) => any))[]
 ) => {
 	const toRemoveList = toRemove.filter(Boolean) as Array<string | RegExp | ((cls: string) => any)>
 	return classNames

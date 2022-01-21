@@ -9,9 +9,9 @@ npm install -S jcls
 ```
 
 ```javascript
-import {jcls, rcls} from 'jcls'
+import jcls, {rcls} from 'jcls'
 // or
-const {jcls, rcls} = require('jcls')
+const {default: jcls, rcls} = require('jcls')
 ```
 
 ## API
@@ -19,8 +19,8 @@ const {jcls, rcls} = require('jcls')
 ### Exported methods
 
 ```typescript
-export declare const jcls: (...classNames: ReadonlyArray<string | boolean | null | undefined>) => string;
-export declare const rcls: (classNames: string, ...toRemove: (string | boolean | RegExp | ((cls: string) => any) | null | undefined)[]) => string;
+export default function jcls(...classNames: readonly any[]): string;
+export declare const rcls: (classNames: string, ...toRemove: readonly any[]) => string;
 ```
 
 - `jcls(...classNames)`: Join classes into a single string.
