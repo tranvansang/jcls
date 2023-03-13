@@ -2,18 +2,13 @@
   "name": "jcls",
   "version": "0.2.1",
   "main": "index.js",
+  "module": "index.mjs",
   "repository": "https://github.com/tranvansang/jcls",
   "files": [
     "index.js",
     "index.d.ts",
     "index.mjs"
   ],
-  "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
-    }
-  },
   "keywords": [
     "class",
     "class names",
