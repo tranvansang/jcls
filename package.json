@@ -6,11 +6,11 @@
   "files": [
     "index.js",
     "index.d.ts",
-    "index.mjs"
+    "index.es.js"
   ],
   "exports": {
     ".": {
-      "import": "./index.mjs",
+      "import": "./index.es.js",
       "require": "./index.js"
     }
   },
