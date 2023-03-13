@@ -8,12 +8,7 @@
     "index.d.ts",
     "index.es.js"
   ],
-  "exports": {
-    ".": {
-      "import": "./index.es.js",
-      "require": "./index.js"
-    }
-  },
+  "module": "index.es.js",
   "keywords": [
     "class",
     "class names",
