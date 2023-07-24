@@ -1,6 +1,5 @@
 'use strict'
 module.exports = jcls
-exports.default = jcls
 exports.rcls = rcls
 
 const classDelim = ' '
@@ -11,7 +10,7 @@ function jcls(...classNames) {
 		.join(classDelim)
 }
 
-const rcls = (classNames, ...toRemove) => {
+function rcls(classNames, ...toRemove){
 	const toRemoveList = toRemove.filter(Boolean)
 	return classNames
 		.split(classDelim)
