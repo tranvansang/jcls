@@ -1,6 +1,8 @@
 'use strict'
-Object.defineProperty(exports, '__esModule', {value: true})
-exports.rcls = void 0
+module.exports = jcls
+exports.default = jcls
+exports.rcls = rcls
+
 const classDelim = ' '
 
 function jcls(...classNames) {
@@ -9,7 +11,6 @@ function jcls(...classNames) {
 		.join(classDelim)
 }
 
-exports.default = jcls
 const rcls = (classNames, ...toRemove) => {
 	const toRemoveList = toRemove.filter(Boolean)
 	return classNames
@@ -21,4 +22,3 @@ const rcls = (classNames, ...toRemove) => {
 				: cls.test(cl)))
 		.join(classDelim)
 }
-exports.rcls = rcls

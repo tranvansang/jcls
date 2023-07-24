@@ -12,6 +12,9 @@ npm install -S jcls
 import jcls, {rcls} from 'jcls'
 // or
 const {default: jcls, rcls} = require('jcls')
+// or
+const jcls = require('jcls')
+const {rcls} = require('jcls')
 ```
 
 ## API

@@ -1,7 +1,6 @@
 {
   "name": "jcls",
-  "version": "0.2.7",
-  "module": "index.mjs",
+  "version": "0.3.0",
   "main": "index.js",
   "exports": {
     ".": {
@@ -13,7 +12,8 @@
   "files": [
     "index.js",
     "index.d.ts",
-    "index.mjs"
+    "index.mjs",
+    "index.d.mts"
   ],
   "keywords": [
     "class",
